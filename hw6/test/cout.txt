@@ -1,0 +1,23 @@
+==192708== Memcheck, a memory error detector
+==192708== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==192708== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==192708== Command: ./client attu1 35919
+==192708== Parent PID: 173987
+==192708== 
+==192708== 
+==192708== HEAP SUMMARY:
+==192708==     in use at exit: 49,212 bytes in 238 blocks
+==192708==   total heap usage: 19,998,880 allocs, 19,998,642 frees, 386,774,613 bytes allocated
+==192708== 
+==192708== LEAK SUMMARY:
+==192708==    definitely lost: 0 bytes in 0 blocks
+==192708==    indirectly lost: 0 bytes in 0 blocks
+==192708==      possibly lost: 1,352 bytes in 18 blocks
+==192708==    still reachable: 47,860 bytes in 220 blocks
+==192708==                       of which reachable via heuristic:
+==192708==                         newarray           : 1,536 bytes in 16 blocks
+==192708==         suppressed: 0 bytes in 0 blocks
+==192708== Rerun with --leak-check=full to see details of leaked memory
+==192708== 
+==192708== For counts of detected and suppressed errors, rerun with: -v
+==192708== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

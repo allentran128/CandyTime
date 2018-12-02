@@ -1,0 +1,547 @@
+==53995== Memcheck, a memory error detector
+==53995== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==53995== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==53995== Command: ./client attu4 33306
+==53995== Parent PID: 15753
+==53995== 
+==53995== Thread 2:
+==53995== Conditional jump or move depends on uninitialised value(s)
+==53995==    at 0x4C27B79: malloc (vg_replace_malloc.c:299)
+==53995==    by 0x407878: Manager::Manager(Manager*) (manager.h:40)
+==53995==    by 0x407AB7: Path::Path(Path*) (thread.h:29)
+==53995==    by 0x407077: BFS(int) (thread.cc:61)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995== 
+==53995== Invalid write of size 4
+==53995==    at 0x407952: Manager::Manager(Manager*) (manager.h:49)
+==53995==    by 0x407AB7: Path::Path(Path*) (thread.h:29)
+==53995==    by 0x407077: BFS(int) (thread.cc:61)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995==  Address 0xe97ff90 is 0 bytes after a block of size 0 alloc'd
+==53995==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53995==    by 0x407878: Manager::Manager(Manager*) (manager.h:40)
+==53995==    by 0x407AB7: Path::Path(Path*) (thread.h:29)
+==53995==    by 0x407077: BFS(int) (thread.cc:61)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995== 
+==53995== Conditional jump or move depends on uninitialised value(s)
+==53995==    at 0x4C27B79: malloc (vg_replace_malloc.c:299)
+==53995==    by 0x407878: Manager::Manager(Manager*) (manager.h:40)
+==53995==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53995==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995== 
+==53995== Invalid read of size 4
+==53995==    at 0x407950: Manager::Manager(Manager*) (manager.h:49)
+==53995==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53995==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995==  Address 0xe97ff90 is 0 bytes after a block of size 0 alloc'd
+==53995==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53995==    by 0x407878: Manager::Manager(Manager*) (manager.h:40)
+==53995==    by 0x407AB7: Path::Path(Path*) (thread.h:29)
+==53995==    by 0x407077: BFS(int) (thread.cc:61)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995== 
+==53995== Invalid write of size 4
+==53995==    at 0x407952: Manager::Manager(Manager*) (manager.h:49)
+==53995==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53995==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995==  Address 0xe983990 is 0 bytes after a block of size 0 alloc'd
+==53995==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53995==    by 0x407878: Manager::Manager(Manager*) (manager.h:40)
+==53995==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53995==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995== 
+==53995== Invalid read of size 4
+==53995==    at 0x40A0BA: Manager::xSwap(int, int) (manager.cc:66)
+==53995==    by 0x40A084: Manager::pullDown(int, int) (manager.cc:59)
+==53995==    by 0x409FE2: Manager::gravity() (manager.cc:33)
+==53995==    by 0x40A22D: Manager::searchBoard(int) (manager.cc:94)
+==53995==    by 0x406E63: applyMoves(Path*) (thread.cc:30)
+==53995==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995==  Address 0xe987390 is 0 bytes after a block of size 0 alloc'd
+==53995==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53995==    by 0x407878: Manager::Manager(Manager*) (manager.h:40)
+==53995==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53995==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995== 
+==53995== Invalid read of size 4
+==53995==    at 0x40A138: Manager::xSwap(int, int) (manager.cc:71)
+==53995==    by 0x40A084: Manager::pullDown(int, int) (manager.cc:59)
+==53995==    by 0x409FE2: Manager::gravity() (manager.cc:33)
+==53995==    by 0x40A22D: Manager::searchBoard(int) (manager.cc:94)
+==53995==    by 0x406E63: applyMoves(Path*) (thread.cc:30)
+==53995==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995==  Address 0xe987390 is 0 bytes after a block of size 0 alloc'd
+==53995==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53995==    by 0x407878: Manager::Manager(Manager*) (manager.h:40)
+==53995==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53995==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995== 
+==53995== Invalid write of size 4
+==53995==    at 0x40A13D: Manager::xSwap(int, int) (manager.cc:71)
+==53995==    by 0x40A084: Manager::pullDown(int, int) (manager.cc:59)
+==53995==    by 0x409FE2: Manager::gravity() (manager.cc:33)
+==53995==    by 0x40A22D: Manager::searchBoard(int) (manager.cc:94)
+==53995==    by 0x406E63: applyMoves(Path*) (thread.cc:30)
+==53995==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995==  Address 0xe987390 is 0 bytes after a block of size 0 alloc'd
+==53995==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53995==    by 0x407878: Manager::Manager(Manager*) (manager.h:40)
+==53995==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53995==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995== 
+==53995== Invalid read of size 4
+==53995==    at 0x407950: Manager::Manager(Manager*) (manager.h:49)
+==53995==    by 0x407AB7: Path::Path(Path*) (thread.h:29)
+==53995==    by 0x407077: BFS(int) (thread.cc:61)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995==  Address 0xe987390 is 0 bytes after a block of size 0 alloc'd
+==53995==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53995==    by 0x407878: Manager::Manager(Manager*) (manager.h:40)
+==53995==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53995==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995== 
+==53995== Conditional jump or move depends on uninitialised value(s)
+==53995==    at 0x4C27B79: malloc (vg_replace_malloc.c:299)
+==53995==    by 0x407878: Manager::Manager(Manager*) (manager.h:40)
+==53995==    by 0x407AB7: Path::Path(Path*) (thread.h:29)
+==53995==    by 0x4070B9: BFS(int) (thread.cc:66)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995== 
+==53995== Invalid read of size 4
+==53995==    at 0x407950: Manager::Manager(Manager*) (manager.h:49)
+==53995==    by 0x407AB7: Path::Path(Path*) (thread.h:29)
+==53995==    by 0x4070B9: BFS(int) (thread.cc:66)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995==  Address 0xe987390 is 0 bytes after a block of size 0 alloc'd
+==53995==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53995==    by 0x407878: Manager::Manager(Manager*) (manager.h:40)
+==53995==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53995==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995== 
+==53995== Invalid write of size 4
+==53995==    at 0x407952: Manager::Manager(Manager*) (manager.h:49)
+==53995==    by 0x407AB7: Path::Path(Path*) (thread.h:29)
+==53995==    by 0x4070B9: BFS(int) (thread.cc:66)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995==  Address 0xea8d940 is 0 bytes after a block of size 0 alloc'd
+==53995==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53995==    by 0x407878: Manager::Manager(Manager*) (manager.h:40)
+==53995==    by 0x407AB7: Path::Path(Path*) (thread.h:29)
+==53995==    by 0x4070B9: BFS(int) (thread.cc:66)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995== 
+==53995== 
+==53995== HEAP SUMMARY:
+==53995==     in use at exit: 255,901 bytes in 13,192 blocks
+==53995==   total heap usage: 1,001,008 allocs, 987,816 frees, 49,790,674 bytes allocated
+==53995== 
+==53995== Thread 1:
+==53995== 16 bytes in 1 blocks are possibly lost in loss record 91 of 260
+==53995==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53995==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFF79A: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AE3CAB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995==    by 0xFFEFFFD25: ???
+==53995== 
+==53995== 16 bytes in 1 blocks are possibly lost in loss record 92 of 260
+==53995==    at 0x4C27B2D: malloc (vg_replace_malloc.c:298)
+==53995==    by 0x4C29AF9: realloc (vg_replace_malloc.c:785)
+==53995==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFF6A5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AE3CAB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995== 
+==53995== 16 bytes in 1 blocks are possibly lost in loss record 93 of 260
+==53995==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53995==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFF79A: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AE3D11: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995==    by 0xFFEFFFD25: ???
+==53995== 
+==53995== 16 bytes in 1 blocks are possibly lost in loss record 94 of 260
+==53995==    at 0x4C27B2D: malloc (vg_replace_malloc.c:298)
+==53995==    by 0x4C29AF9: realloc (vg_replace_malloc.c:785)
+==53995==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFF6A5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AE3D11: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995== 
+==53995== 16 bytes in 1 blocks are possibly lost in loss record 95 of 260
+==53995==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53995==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFF79A: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AED6F4: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA19: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995==    by 0xFFEFFFD25: ???
+==53995== 
+==53995== 16 bytes in 1 blocks are possibly lost in loss record 96 of 260
+==53995==    at 0x4C27B2D: malloc (vg_replace_malloc.c:298)
+==53995==    by 0x4C29AF9: realloc (vg_replace_malloc.c:785)
+==53995==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFF6A5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AED6F4: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA19: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995== 
+==53995== 16 bytes in 1 blocks are possibly lost in loss record 97 of 260
+==53995==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53995==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFF79A: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AE878B: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA1E: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995==    by 0xFFEFFFD25: ???
+==53995== 
+==53995== 16 bytes in 1 blocks are possibly lost in loss record 98 of 260
+==53995==    at 0x4C27B2D: malloc (vg_replace_malloc.c:298)
+==53995==    by 0x4C29AF9: realloc (vg_replace_malloc.c:785)
+==53995==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFF6A5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AE878B: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA1E: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995== 
+==53995== 32 bytes in 1 blocks are definitely lost in loss record 103 of 260
+==53995==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53995==    by 0x40AAC2: MessageManager::deserializeAction(char const*, Manager*&) (messageManager.cc:64)
+==53995==    by 0x402FEE: main (model.cc:109)
+==53995== 
+==53995== 96 bytes in 1 blocks are possibly lost in loss record 217 of 260
+==53995==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53995==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADD94C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995==    by 0xFFEFFFD25: ???
+==53995== 
+==53995== 96 bytes in 1 blocks are possibly lost in loss record 218 of 260
+==53995==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53995==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B02FC3: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AE3CAB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995== 
+==53995== 96 bytes in 1 blocks are possibly lost in loss record 219 of 260
+==53995==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53995==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B02FC3: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AE3D11: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995== 
+==53995== 96 bytes in 1 blocks are possibly lost in loss record 220 of 260
+==53995==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53995==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B02FC3: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AED6F4: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA19: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995== 
+==53995== 96 bytes in 1 blocks are possibly lost in loss record 221 of 260
+==53995==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53995==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B02FC3: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AE878B: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA1E: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995== 
+==53995== 132 bytes in 1 blocks are possibly lost in loss record 224 of 260
+==53995==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53995==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFF217: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B0304A: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AE3CAB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995==    by 0xFFEFFFD25: ???
+==53995== 
+==53995== 132 bytes in 1 blocks are possibly lost in loss record 225 of 260
+==53995==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53995==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFF217: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B0304A: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AE3D11: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995==    by 0xFFEFFFD25: ???
+==53995== 
+==53995== 148 bytes in 1 blocks are possibly lost in loss record 226 of 260
+==53995==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53995==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFF013: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B0304A: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AED6F4: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA19: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995==    by 0xFFEFFFD25: ???
+==53995== 
+==53995== 148 bytes in 1 blocks are possibly lost in loss record 227 of 260
+==53995==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53995==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFF013: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B0304A: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AE878B: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA1E: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995==    by 0xFFEFFFD25: ???
+==53995== 
+==53995== 184 bytes in 1 blocks are possibly lost in loss record 229 of 260
+==53995==    at 0x4C29B78: realloc (vg_replace_malloc.c:785)
+==53995==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53995==    by 0x6AFE798: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6B03214: g_type_register_static (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AEF1E4: g_param_type_register_static (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6AF14EB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x6ADDA24: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53995==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53995==    by 0x2: ???
+==53995==    by 0xFFEFFFD16: ???
+==53995==    by 0xFFEFFFD1F: ???
+==53995== 
+==53995== 309 (80 direct, 229 indirect) bytes in 1 blocks are definitely lost in loss record 232 of 260
+==53995==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53995==    by 0x411EEA: json_object (value.c:53)
+==53995==    by 0x40EF14: parse_object (load.c:686)
+==53995==    by 0x40EF14: parse_value (load.c:856)
+==53995==    by 0x40F345: parse_json (load.c:893)
+==53995==    by 0x40F4CC: json_loads (load.c:953)
+==53995==    by 0x40A9D1: MessageManager::deserializeAction(char const*, Manager*&) (messageManager.cc:51)
+==53995==    by 0x402FEE: main (model.cc:109)
+==53995== 
+==53995== 206,348 (2,656 direct, 203,692 indirect) bytes in 83 blocks are definitely lost in loss record 260 of 260
+==53995==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53995==    by 0x406ECC: applyMoves(Path*) (thread.cc:33)
+==53995==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53995==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53995==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53995==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53995==    by 0x415C2F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53995==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53995==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53995== 
+==53995== LEAK SUMMARY:
+==53995==    definitely lost: 2,768 bytes in 85 blocks
+==53995==    indirectly lost: 203,921 bytes in 12,869 blocks
+==53995==      possibly lost: 1,352 bytes in 18 blocks
+==53995==    still reachable: 47,860 bytes in 220 blocks
+==53995==                       of which reachable via heuristic:
+==53995==                         newarray           : 1,536 bytes in 16 blocks
+==53995==         suppressed: 0 bytes in 0 blocks
+==53995== Reachable blocks (those to which a pointer was found) are not shown.
+==53995== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==53995== 
+==53995== For counts of detected and suppressed errors, rerun with: -v
+==53995== Use --track-origins=yes to see where uninitialised values come from
+==53995== ERROR SUMMARY: 109968 errors from 33 contexts (suppressed: 0 from 0)

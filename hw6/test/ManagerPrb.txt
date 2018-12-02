@@ -1,0 +1,335 @@
+==99306== Memcheck, a memory error detector
+==99306== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==99306== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==99306== Command: ./client attu4 33306
+==99306== Parent PID: 93214
+==99306== 
+==99306== Conditional jump or move depends on uninitialised value(s)
+==99306==    at 0x4C27B79: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x40AA01: MessageManager::deserializeAction(char const*, Manager*) (messageManager.cc:65)
+==99306==    by 0x402F4C: main (model.cc:100)
+==99306== 
+==99306== Invalid write of size 4
+==99306==    at 0x407894: Manager::Manager(Manager*) (manager.h:53)
+==99306==    by 0x40AA01: MessageManager::deserializeAction(char const*, Manager*) (messageManager.cc:65)
+==99306==    by 0x402F4C: main (model.cc:100)
+==99306==  Address 0xe97fed0 is 0 bytes after a block of size 0 alloc'd
+==99306==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x40AA01: MessageManager::deserializeAction(char const*, Manager*) (messageManager.cc:65)
+==99306==    by 0x402F4C: main (model.cc:100)
+==99306== 
+==99306== Thread 2:
+==99306== Conditional jump or move depends on uninitialised value(s)
+==99306==    at 0x4C27B79: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x406F61: BFS(int) (thread.cc:71)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== Invalid read of size 4
+==99306==    at 0x407892: Manager::Manager(Manager*) (manager.h:53)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x406F61: BFS(int) (thread.cc:71)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306==  Address 0xe97fed0 is 0 bytes after a block of size 0 alloc'd
+==99306==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x40AA01: MessageManager::deserializeAction(char const*, Manager*) (messageManager.cc:65)
+==99306==    by 0x402F4C: main (model.cc:100)
+==99306== 
+==99306== Invalid write of size 4
+==99306==    at 0x407894: Manager::Manager(Manager*) (manager.h:53)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x406F61: BFS(int) (thread.cc:71)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306==  Address 0xe983990 is 0 bytes after a block of size 0 alloc'd
+==99306==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x406F61: BFS(int) (thread.cc:71)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== Conditional jump or move depends on uninitialised value(s)
+==99306==    at 0x4C27B79: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x406D0F: applyMoves(Path*) (thread.cc:36)
+==99306==    by 0x4072AC: BFS(int) (thread.cc:95)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== Invalid read of size 4
+==99306==    at 0x407892: Manager::Manager(Manager*) (manager.h:53)
+==99306==    by 0x406D0F: applyMoves(Path*) (thread.cc:36)
+==99306==    by 0x4072AC: BFS(int) (thread.cc:95)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306==  Address 0xe983990 is 0 bytes after a block of size 0 alloc'd
+==99306==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x406F61: BFS(int) (thread.cc:71)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== Invalid write of size 4
+==99306==    at 0x407894: Manager::Manager(Manager*) (manager.h:53)
+==99306==    by 0x406D0F: applyMoves(Path*) (thread.cc:36)
+==99306==    by 0x4072AC: BFS(int) (thread.cc:95)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306==  Address 0xe987390 is 0 bytes after a block of size 0 alloc'd
+==99306==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x406D0F: applyMoves(Path*) (thread.cc:36)
+==99306==    by 0x4072AC: BFS(int) (thread.cc:95)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== Invalid read of size 4
+==99306==    at 0x40A01E: Manager::xSwap(int, int) (manager.cc:66)
+==99306==    by 0x409FE8: Manager::pullDown(int, int) (manager.cc:59)
+==99306==    by 0x409F46: Manager::gravity() (manager.cc:33)
+==99306==    by 0x40A191: Manager::searchBoard(int) (manager.cc:94)
+==99306==    by 0x406D46: applyMoves(Path*) (thread.cc:39)
+==99306==    by 0x4072AC: BFS(int) (thread.cc:95)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306==  Address 0xe98e790 is 0 bytes after a block of size 0 alloc'd
+==99306==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x406D0F: applyMoves(Path*) (thread.cc:36)
+==99306==    by 0x4072AC: BFS(int) (thread.cc:95)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== Invalid read of size 4
+==99306==    at 0x40A09C: Manager::xSwap(int, int) (manager.cc:71)
+==99306==    by 0x409FE8: Manager::pullDown(int, int) (manager.cc:59)
+==99306==    by 0x409F46: Manager::gravity() (manager.cc:33)
+==99306==    by 0x40A191: Manager::searchBoard(int) (manager.cc:94)
+==99306==    by 0x406D46: applyMoves(Path*) (thread.cc:39)
+==99306==    by 0x4072AC: BFS(int) (thread.cc:95)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306==  Address 0xe98e790 is 0 bytes after a block of size 0 alloc'd
+==99306==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x406D0F: applyMoves(Path*) (thread.cc:36)
+==99306==    by 0x4072AC: BFS(int) (thread.cc:95)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== Invalid write of size 4
+==99306==    at 0x40A0A1: Manager::xSwap(int, int) (manager.cc:71)
+==99306==    by 0x409FE8: Manager::pullDown(int, int) (manager.cc:59)
+==99306==    by 0x409F46: Manager::gravity() (manager.cc:33)
+==99306==    by 0x40A191: Manager::searchBoard(int) (manager.cc:94)
+==99306==    by 0x406D46: applyMoves(Path*) (thread.cc:39)
+==99306==    by 0x4072AC: BFS(int) (thread.cc:95)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306==  Address 0xe98e790 is 0 bytes after a block of size 0 alloc'd
+==99306==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x406D0F: applyMoves(Path*) (thread.cc:36)
+==99306==    by 0x4072AC: BFS(int) (thread.cc:95)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== Conditional jump or move depends on uninitialised value(s)
+==99306==    at 0x4C27B79: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x4073C4: BFS(int) (thread.cc:117)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== Invalid read of size 4
+==99306==    at 0x407892: Manager::Manager(Manager*) (manager.h:53)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x4073C4: BFS(int) (thread.cc:117)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306==  Address 0xe98e790 is 0 bytes after a block of size 0 alloc'd
+==99306==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x406D0F: applyMoves(Path*) (thread.cc:36)
+==99306==    by 0x4072AC: BFS(int) (thread.cc:95)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== Invalid write of size 4
+==99306==    at 0x407894: Manager::Manager(Manager*) (manager.h:53)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x4073C4: BFS(int) (thread.cc:117)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306==  Address 0xeb109b0 is 0 bytes after a block of size 0 alloc'd
+==99306==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x4073C4: BFS(int) (thread.cc:117)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== Thread 5:
+==99306== Conditional jump or move depends on uninitialised value(s)
+==99306==    at 0x4C27B79: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x406FC5: BFS(int) (thread.cc:76)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== Invalid read of size 4
+==99306==    at 0x407892: Manager::Manager(Manager*) (manager.h:53)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x406FC5: BFS(int) (thread.cc:76)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306==  Address 0xeb109b0 is 0 bytes after a block of size 0 alloc'd
+==99306==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x4073C4: BFS(int) (thread.cc:117)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== Invalid write of size 4
+==99306==    at 0x407894: Manager::Manager(Manager*) (manager.h:53)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x406FC5: BFS(int) (thread.cc:76)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306==  Address 0xeb17f10 is 0 bytes after a block of size 0 alloc'd
+==99306==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==99306==    by 0x4077BA: Manager::Manager(Manager*) (manager.h:44)
+==99306==    by 0x407A1B: Path::Path(Path*) (thread.h:29)
+==99306==    by 0x406FC5: BFS(int) (thread.cc:76)
+==99306==    by 0x406B89: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==99306==    by 0x406AA8: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==99306==    by 0x406A47: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==99306==    by 0x415BBF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==99306==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==99306==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==99306== 
+==99306== 
+==99306== HEAP SUMMARY:
+==99306==     in use at exit: 49,212 bytes in 238 blocks
+==99306==   total heap usage: 3,059,308 allocs, 3,059,070 frees, 86,814,342 bytes allocated
+==99306== 
+==99306== LEAK SUMMARY:
+==99306==    definitely lost: 0 bytes in 0 blocks
+==99306==    indirectly lost: 0 bytes in 0 blocks
+==99306==      possibly lost: 1,352 bytes in 18 blocks
+==99306==    still reachable: 47,860 bytes in 220 blocks
+==99306==                       of which reachable via heuristic:
+==99306==                         newarray           : 1,536 bytes in 16 blocks
+==99306==         suppressed: 0 bytes in 0 blocks
+==99306== Rerun with --leak-check=full to see details of leaked memory
+==99306== 
+==99306== For counts of detected and suppressed errors, rerun with: -v
+==99306== Use --track-origins=yes to see where uninitialised values come from
+==99306== ERROR SUMMARY: 271012 errors from 17 contexts (suppressed: 0 from 0)

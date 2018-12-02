@@ -1,0 +1,312 @@
+==44504== Memcheck, a memory error detector
+==44504== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==44504== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==44504== Command: ./client attu4 33306
+==44504== Parent PID: 15753
+==44504== 
+==44504== 
+==44504== HEAP SUMMARY:
+==44504==     in use at exit: 20,083,786 bytes in 1,255,965 blocks
+==44504==   total heap usage: 1,594,275 allocs, 338,310 frees, 36,762,402 bytes allocated
+==44504== 
+==44504== 16 bytes in 1 blocks are possibly lost in loss record 89 of 261
+==44504==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==44504==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFF79A: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AE3CAB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504==    by 0xFFEFFFD25: ???
+==44504== 
+==44504== 16 bytes in 1 blocks are possibly lost in loss record 90 of 261
+==44504==    at 0x4C27B2D: malloc (vg_replace_malloc.c:298)
+==44504==    by 0x4C29AF9: realloc (vg_replace_malloc.c:785)
+==44504==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFF6A5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AE3CAB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504== 
+==44504== 16 bytes in 1 blocks are possibly lost in loss record 91 of 261
+==44504==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==44504==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFF79A: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AE3D11: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504==    by 0xFFEFFFD25: ???
+==44504== 
+==44504== 16 bytes in 1 blocks are possibly lost in loss record 92 of 261
+==44504==    at 0x4C27B2D: malloc (vg_replace_malloc.c:298)
+==44504==    by 0x4C29AF9: realloc (vg_replace_malloc.c:785)
+==44504==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFF6A5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AE3D11: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504== 
+==44504== 16 bytes in 1 blocks are possibly lost in loss record 93 of 261
+==44504==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==44504==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFF79A: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AED6F4: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA19: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504==    by 0xFFEFFFD25: ???
+==44504== 
+==44504== 16 bytes in 1 blocks are possibly lost in loss record 94 of 261
+==44504==    at 0x4C27B2D: malloc (vg_replace_malloc.c:298)
+==44504==    by 0x4C29AF9: realloc (vg_replace_malloc.c:785)
+==44504==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFF6A5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AED6F4: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA19: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504== 
+==44504== 16 bytes in 1 blocks are possibly lost in loss record 95 of 261
+==44504==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==44504==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFF79A: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AE878B: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA1E: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504==    by 0xFFEFFFD25: ???
+==44504== 
+==44504== 16 bytes in 1 blocks are possibly lost in loss record 96 of 261
+==44504==    at 0x4C27B2D: malloc (vg_replace_malloc.c:298)
+==44504==    by 0x4C29AF9: realloc (vg_replace_malloc.c:785)
+==44504==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFF6A5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AE878B: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA1E: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504== 
+==44504== 32 bytes in 1 blocks are definitely lost in loss record 101 of 261
+==44504==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==44504==    by 0x40AB00: MessageManager::deserializeAction(char const*, Manager*&) (messageManager.cc:64)
+==44504==    by 0x40302E: main (model.cc:109)
+==44504== 
+==44504== 96 bytes in 1 blocks are possibly lost in loss record 215 of 261
+==44504==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==44504==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADD94C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504==    by 0xFFEFFFD25: ???
+==44504== 
+==44504== 96 bytes in 1 blocks are possibly lost in loss record 216 of 261
+==44504==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==44504==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B02FC3: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AE3CAB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504== 
+==44504== 96 bytes in 1 blocks are possibly lost in loss record 217 of 261
+==44504==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==44504==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B02FC3: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AE3D11: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504== 
+==44504== 96 bytes in 1 blocks are possibly lost in loss record 218 of 261
+==44504==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==44504==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B02FC3: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AED6F4: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA19: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504== 
+==44504== 96 bytes in 1 blocks are possibly lost in loss record 219 of 261
+==44504==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==44504==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B02FC3: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AE878B: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA1E: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504== 
+==44504== 132 bytes in 1 blocks are possibly lost in loss record 222 of 261
+==44504==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==44504==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFF217: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B0304A: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AE3CAB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504==    by 0xFFEFFFD25: ???
+==44504== 
+==44504== 132 bytes in 1 blocks are possibly lost in loss record 223 of 261
+==44504==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==44504==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFF217: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B0304A: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AE3D11: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504==    by 0xFFEFFFD25: ???
+==44504== 
+==44504== 148 bytes in 1 blocks are possibly lost in loss record 224 of 261
+==44504==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==44504==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFF013: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B0304A: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AED6F4: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA19: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504==    by 0xFFEFFFD25: ???
+==44504== 
+==44504== 148 bytes in 1 blocks are possibly lost in loss record 225 of 261
+==44504==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==44504==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFF013: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B0304A: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AE878B: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA1E: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504==    by 0xFFEFFFD25: ???
+==44504== 
+==44504== 184 bytes in 1 blocks are possibly lost in loss record 227 of 261
+==44504==    at 0x4C29B78: realloc (vg_replace_malloc.c:785)
+==44504==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==44504==    by 0x6AFE798: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6B03214: g_type_register_static (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AEF1E4: g_param_type_register_static (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6AF14EB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x6ADDA24: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==44504==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==44504==    by 0x2: ???
+==44504==    by 0xFFEFFFD16: ???
+==44504==    by 0xFFEFFFD1F: ???
+==44504== 
+==44504== 618 (160 direct, 458 indirect) bytes in 2 blocks are definitely lost in loss record 235 of 261
+==44504==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==44504==    by 0x411F2A: json_object (value.c:53)
+==44504==    by 0x40EF54: parse_object (load.c:686)
+==44504==    by 0x40EF54: parse_value (load.c:856)
+==44504==    by 0x40F385: parse_json (load.c:893)
+==44504==    by 0x40F50C: json_loads (load.c:953)
+==44504==    by 0x40AA0F: MessageManager::deserializeAction(char const*, Manager*&) (messageManager.cc:51)
+==44504==    by 0x40302E: main (model.cc:109)
+==44504== 
+==44504== 773,972 (9,856 direct, 764,116 indirect) bytes in 308 blocks are definitely lost in loss record 252 of 261
+==44504==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==44504==    by 0x406ED9: applyMoves(Path*) (thread.cc:32)
+==44504==    by 0x407399: BFS(int) (thread.cc:89)
+==44504==    by 0x406CB3: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==44504==    by 0x406BD2: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==44504==    by 0x406B71: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==44504==    by 0x415C6F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==44504==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==44504==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==44504== 
+==44504== 19,259,952 (501,888 direct, 18,758,064 indirect) bytes in 7,842 blocks are definitely lost in loss record 261 of 261
+==44504==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==44504==    by 0x406E2B: applyMoves(Path*) (thread.cc:26)
+==44504==    by 0x407399: BFS(int) (thread.cc:89)
+==44504==    by 0x406CB3: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==44504==    by 0x406BD2: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==44504==    by 0x406B71: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==44504==    by 0x415C6F: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==44504==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==44504==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==44504== 
+==44504== LEAK SUMMARY:
+==44504==    definitely lost: 511,936 bytes in 8,153 blocks
+==44504==    indirectly lost: 19,522,638 bytes in 1,247,574 blocks
+==44504==      possibly lost: 1,352 bytes in 18 blocks
+==44504==    still reachable: 47,860 bytes in 220 blocks
+==44504==                       of which reachable via heuristic:
+==44504==                         newarray           : 1,536 bytes in 16 blocks
+==44504==         suppressed: 0 bytes in 0 blocks
+==44504== Reachable blocks (those to which a pointer was found) are not shown.
+==44504== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==44504== 
+==44504== For counts of detected and suppressed errors, rerun with: -v
+==44504== ERROR SUMMARY: 22 errors from 22 contexts (suppressed: 0 from 0)

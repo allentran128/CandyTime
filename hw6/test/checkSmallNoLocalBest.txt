@@ -1,0 +1,1675 @@
+==53898== Memcheck, a memory error detector
+==53898== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==53898== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==53898== Command: ./client attu4 33306
+==53898== Parent PID: 15753
+==53898== 
+==53898== Thread 3:
+==53898== Conditional jump or move depends on uninitialised value(s)
+==53898==    at 0x4C27B79: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407844: Manager::Manager(Manager*) (manager.h:40)
+==53898==    by 0x407A83: Path::Path(Path*) (thread.h:29)
+==53898==    by 0x407077: BFS(int) (thread.cc:61)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid write of size 4
+==53898==    at 0x40791E: Manager::Manager(Manager*) (manager.h:49)
+==53898==    by 0x407A83: Path::Path(Path*) (thread.h:29)
+==53898==    by 0x407077: BFS(int) (thread.cc:61)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898==  Address 0xe97ff90 is 0 bytes after a block of size 0 alloc'd
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407844: Manager::Manager(Manager*) (manager.h:40)
+==53898==    by 0x407A83: Path::Path(Path*) (thread.h:29)
+==53898==    by 0x407077: BFS(int) (thread.cc:61)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Conditional jump or move depends on uninitialised value(s)
+==53898==    at 0x4C27B79: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407844: Manager::Manager(Manager*) (manager.h:40)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 4
+==53898==    at 0x40791C: Manager::Manager(Manager*) (manager.h:49)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898==  Address 0xe97ff90 is 0 bytes after a block of size 0 alloc'd
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407844: Manager::Manager(Manager*) (manager.h:40)
+==53898==    by 0x407A83: Path::Path(Path*) (thread.h:29)
+==53898==    by 0x407077: BFS(int) (thread.cc:61)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid write of size 4
+==53898==    at 0x40791E: Manager::Manager(Manager*) (manager.h:49)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898==  Address 0xe983990 is 0 bytes after a block of size 0 alloc'd
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407844: Manager::Manager(Manager*) (manager.h:40)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 4
+==53898==    at 0x40A086: Manager::xSwap(int, int) (manager.cc:66)
+==53898==    by 0x40A050: Manager::pullDown(int, int) (manager.cc:59)
+==53898==    by 0x409FAE: Manager::gravity() (manager.cc:33)
+==53898==    by 0x40A1F9: Manager::searchBoard(int) (manager.cc:94)
+==53898==    by 0x406E63: applyMoves(Path*) (thread.cc:30)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898==  Address 0xe987390 is 0 bytes after a block of size 0 alloc'd
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407844: Manager::Manager(Manager*) (manager.h:40)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 4
+==53898==    at 0x40A104: Manager::xSwap(int, int) (manager.cc:71)
+==53898==    by 0x40A050: Manager::pullDown(int, int) (manager.cc:59)
+==53898==    by 0x409FAE: Manager::gravity() (manager.cc:33)
+==53898==    by 0x40A1F9: Manager::searchBoard(int) (manager.cc:94)
+==53898==    by 0x406E63: applyMoves(Path*) (thread.cc:30)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898==  Address 0xe987390 is 0 bytes after a block of size 0 alloc'd
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407844: Manager::Manager(Manager*) (manager.h:40)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid write of size 4
+==53898==    at 0x40A109: Manager::xSwap(int, int) (manager.cc:71)
+==53898==    by 0x40A050: Manager::pullDown(int, int) (manager.cc:59)
+==53898==    by 0x409FAE: Manager::gravity() (manager.cc:33)
+==53898==    by 0x40A1F9: Manager::searchBoard(int) (manager.cc:94)
+==53898==    by 0x406E63: applyMoves(Path*) (thread.cc:30)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898==  Address 0xe987390 is 0 bytes after a block of size 0 alloc'd
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407844: Manager::Manager(Manager*) (manager.h:40)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Thread 9:
+==53898== Invalid read of size 4
+==53898==    at 0x40791C: Manager::Manager(Manager*) (manager.h:49)
+==53898==    by 0x407A83: Path::Path(Path*) (thread.h:29)
+==53898==    by 0x407077: BFS(int) (thread.cc:61)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898==  Address 0xe987390 is 0 bytes after a block of size 0 alloc'd
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407844: Manager::Manager(Manager*) (manager.h:40)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Conditional jump or move depends on uninitialised value(s)
+==53898==    at 0x4C27B79: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407844: Manager::Manager(Manager*) (manager.h:40)
+==53898==    by 0x407A83: Path::Path(Path*) (thread.h:29)
+==53898==    by 0x4070B9: BFS(int) (thread.cc:66)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 4
+==53898==    at 0x40791C: Manager::Manager(Manager*) (manager.h:49)
+==53898==    by 0x407A83: Path::Path(Path*) (thread.h:29)
+==53898==    by 0x4070B9: BFS(int) (thread.cc:66)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898==  Address 0xe987390 is 0 bytes after a block of size 0 alloc'd
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407844: Manager::Manager(Manager*) (manager.h:40)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid write of size 4
+==53898==    at 0x40791E: Manager::Manager(Manager*) (manager.h:49)
+==53898==    by 0x407A83: Path::Path(Path*) (thread.h:29)
+==53898==    by 0x4070B9: BFS(int) (thread.cc:66)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898==  Address 0xea8d940 is 0 bytes after a block of size 0 alloc'd
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407844: Manager::Manager(Manager*) (manager.h:40)
+==53898==    by 0x407A83: Path::Path(Path*) (thread.h:29)
+==53898==    by 0x4070B9: BFS(int) (thread.cc:66)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Warning: set address range perms: large range [0x395df040, 0x1bf2fbdd0) (undefined)
+==53898== Warning: set address range perms: large range [0x395df028, 0x1bf2fbde8) (noaccess)
+==53898== Thread 1:
+==53898== Invalid read of size 8
+==53898==    at 0x403931: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec1f30 is 0 bytes inside a block of size 32 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x4032E8: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406ECC: applyMoves(Path*) (thread.cc:33)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x409EAE: Manager::~Manager() (manager.cc:11)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe3d8 is 24 bytes inside a block of size 64 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x403948: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406E1E: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409EB9: Manager::~Manager() (manager.cc:11)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe580 is 0 bytes after a block of size 0 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409EB9: Manager::~Manager() (manager.cc:11)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407844: Manager::Manager(Manager*) (manager.h:40)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x409EBE: Manager::~Manager() (manager.cc:13)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe3e0 is 32 bytes inside a block of size 64 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x403948: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406E1E: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 4
+==53898==    at 0x40D3D2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EC9: Manager::~Manager() (manager.cc:13)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe440 is 0 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409ED9: Manager::~Manager() (manager.cc:14)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x4077E1: Manager::Manager(Manager*) (manager.h:36)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 4
+==53898==    at 0x40D3D8: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EC9: Manager::~Manager() (manager.cc:13)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe444 is 4 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409ED9: Manager::~Manager() (manager.cc:14)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x4077E1: Manager::Manager(Manager*) (manager.h:36)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x40D3AE: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EC9: Manager::~Manager() (manager.cc:13)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe448 is 8 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409ED9: Manager::~Manager() (manager.cc:14)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x4077E1: Manager::Manager(Manager*) (manager.h:36)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x40D3BF: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EC9: Manager::~Manager() (manager.cc:13)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebf260 is 0 bytes inside a block of size 288 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3F2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EC9: Manager::~Manager() (manager.cc:13)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40CF65: Allocate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40CFE6: Initiate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40D180: copyArray (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40786E: Manager::Manager(Manager*) (manager.h:42)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3C9: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EC9: Manager::~Manager() (manager.cc:13)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe720 is 0 bytes inside a block of size 8 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3C9: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EC9: Manager::~Manager() (manager.cc:13)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40D0D0: copyArray (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40786E: Manager::Manager(Manager*) (manager.h:42)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x40D3E7: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EC9: Manager::~Manager() (manager.cc:13)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe448 is 8 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409ED9: Manager::~Manager() (manager.cc:14)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x4077E1: Manager::Manager(Manager*) (manager.h:36)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3F2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EC9: Manager::~Manager() (manager.cc:13)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebf260 is 0 bytes inside a block of size 288 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3F2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EC9: Manager::~Manager() (manager.cc:13)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40CF65: Allocate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40CFE6: Initiate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40D180: copyArray (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40786E: Manager::Manager(Manager*) (manager.h:42)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x409ECE: Manager::~Manager() (manager.cc:14)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe3e0 is 32 bytes inside a block of size 64 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x403948: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406E1E: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409ED9: Manager::~Manager() (manager.cc:14)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe440 is 0 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409ED9: Manager::~Manager() (manager.cc:14)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x4077E1: Manager::Manager(Manager*) (manager.h:36)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x409EDE: Manager::~Manager() (manager.cc:15)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe3e8 is 40 bytes inside a block of size 64 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x403948: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406E1E: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 4
+==53898==    at 0x40D3D2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EE9: Manager::~Manager() (manager.cc:15)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe490 is 0 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409EF9: Manager::~Manager() (manager.cc:16)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x4077F6: Manager::Manager(Manager*) (manager.h:37)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 4
+==53898==    at 0x40D3D8: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EE9: Manager::~Manager() (manager.cc:15)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe494 is 4 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409EF9: Manager::~Manager() (manager.cc:16)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x4077F6: Manager::Manager(Manager*) (manager.h:37)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x40D3AE: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EE9: Manager::~Manager() (manager.cc:15)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe498 is 8 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409EF9: Manager::~Manager() (manager.cc:16)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x4077F6: Manager::Manager(Manager*) (manager.h:37)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x40D3BF: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EE9: Manager::~Manager() (manager.cc:15)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec0060 is 0 bytes inside a block of size 288 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3F2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EE9: Manager::~Manager() (manager.cc:15)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40CF65: Allocate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40CFE6: Initiate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40D180: copyArray (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40788D: Manager::Manager(Manager*) (manager.h:43)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3C9: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EE9: Manager::~Manager() (manager.cc:15)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebf520 is 0 bytes inside a block of size 8 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3C9: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EE9: Manager::~Manager() (manager.cc:15)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40D0D0: copyArray (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40788D: Manager::Manager(Manager*) (manager.h:43)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x40D3E7: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EE9: Manager::~Manager() (manager.cc:15)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe498 is 8 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409EF9: Manager::~Manager() (manager.cc:16)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x4077F6: Manager::Manager(Manager*) (manager.h:37)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3F2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EE9: Manager::~Manager() (manager.cc:15)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec0060 is 0 bytes inside a block of size 288 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3F2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409EE9: Manager::~Manager() (manager.cc:15)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40CF65: Allocate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40CFE6: Initiate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40D180: copyArray (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40788D: Manager::Manager(Manager*) (manager.h:43)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x409EEE: Manager::~Manager() (manager.cc:16)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe3e8 is 40 bytes inside a block of size 64 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x403948: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406E1E: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409EF9: Manager::~Manager() (manager.cc:16)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe490 is 0 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409EF9: Manager::~Manager() (manager.cc:16)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x4077F6: Manager::Manager(Manager*) (manager.h:37)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x409EFE: Manager::~Manager() (manager.cc:17)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe3f0 is 48 bytes inside a block of size 64 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x403948: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406E1E: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 4
+==53898==    at 0x40D3D2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F09: Manager::~Manager() (manager.cc:17)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe530 is 0 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409F19: Manager::~Manager() (manager.cc:18)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407820: Manager::Manager(Manager*) (manager.h:39)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 4
+==53898==    at 0x40D3D8: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F09: Manager::~Manager() (manager.cc:17)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe534 is 4 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409F19: Manager::~Manager() (manager.cc:18)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407820: Manager::Manager(Manager*) (manager.h:39)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x40D3AE: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F09: Manager::~Manager() (manager.cc:17)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe538 is 8 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409F19: Manager::~Manager() (manager.cc:18)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407820: Manager::Manager(Manager*) (manager.h:39)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x40D3BF: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F09: Manager::~Manager() (manager.cc:17)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec1c60 is 0 bytes inside a block of size 288 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3F2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F09: Manager::~Manager() (manager.cc:17)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40CF65: Allocate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40CFE6: Initiate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40D180: copyArray (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x4078CB: Manager::Manager(Manager*) (manager.h:45)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3C9: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F09: Manager::~Manager() (manager.cc:17)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec1120 is 0 bytes inside a block of size 8 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3C9: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F09: Manager::~Manager() (manager.cc:17)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40D0D0: copyArray (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x4078CB: Manager::Manager(Manager*) (manager.h:45)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x40D3E7: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F09: Manager::~Manager() (manager.cc:17)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe538 is 8 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409F19: Manager::~Manager() (manager.cc:18)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407820: Manager::Manager(Manager*) (manager.h:39)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3F2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F09: Manager::~Manager() (manager.cc:17)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec1c60 is 0 bytes inside a block of size 288 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3F2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F09: Manager::~Manager() (manager.cc:17)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40CF65: Allocate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40CFE6: Initiate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40D180: copyArray (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x4078CB: Manager::Manager(Manager*) (manager.h:45)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x409F0E: Manager::~Manager() (manager.cc:18)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe3f0 is 48 bytes inside a block of size 64 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x403948: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406E1E: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409F19: Manager::~Manager() (manager.cc:18)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe530 is 0 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409F19: Manager::~Manager() (manager.cc:18)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x407820: Manager::Manager(Manager*) (manager.h:39)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x409F1E: Manager::~Manager() (manager.cc:19)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe3f8 is 56 bytes inside a block of size 64 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x403948: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406E1E: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 4
+==53898==    at 0x40D3D2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F29: Manager::~Manager() (manager.cc:19)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe4e0 is 0 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409F39: Manager::~Manager() (manager.cc:20)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40780B: Manager::Manager(Manager*) (manager.h:38)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 4
+==53898==    at 0x40D3D8: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F29: Manager::~Manager() (manager.cc:19)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe4e4 is 4 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409F39: Manager::~Manager() (manager.cc:20)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40780B: Manager::Manager(Manager*) (manager.h:38)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x40D3AE: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F29: Manager::~Manager() (manager.cc:19)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe4e8 is 8 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409F39: Manager::~Manager() (manager.cc:20)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40780B: Manager::Manager(Manager*) (manager.h:38)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x40D3BF: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F29: Manager::~Manager() (manager.cc:19)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec0e60 is 0 bytes inside a block of size 288 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3F2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F29: Manager::~Manager() (manager.cc:19)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40CF65: Allocate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40CFE6: Initiate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40D180: copyArray (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x4078AC: Manager::Manager(Manager*) (manager.h:44)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3C9: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F29: Manager::~Manager() (manager.cc:19)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec06e0 is 0 bytes inside a block of size 8 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3C9: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F29: Manager::~Manager() (manager.cc:19)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40D0D0: copyArray (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x4078AC: Manager::Manager(Manager*) (manager.h:44)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x40D3E7: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F29: Manager::~Manager() (manager.cc:19)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe4e8 is 8 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409F39: Manager::~Manager() (manager.cc:20)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40780B: Manager::Manager(Manager*) (manager.h:38)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3F2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F29: Manager::~Manager() (manager.cc:19)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec0e60 is 0 bytes inside a block of size 288 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x40D3F2: destroyArray2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x409F29: Manager::~Manager() (manager.cc:19)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40CF65: Allocate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40CFE6: Initiate_array2d (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x40D180: copyArray (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x4078AC: Manager::Manager(Manager*) (manager.h:44)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x409F2E: Manager::~Manager() (manager.cc:20)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe3f8 is 56 bytes inside a block of size 64 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x403948: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406E1E: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409F39: Manager::~Manager() (manager.cc:20)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe4e0 is 0 bytes inside a block of size 16 free'd
+==53898==    at 0x4C28CDD: free (vg_replace_malloc.c:530)
+==53898==    by 0x409F39: Manager::~Manager() (manager.cc:20)
+==53898==    by 0x403940: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x40780B: Manager::Manager(Manager*) (manager.h:38)
+==53898==    by 0x406E2C: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x403948: Path::~Path() (thread.h:34)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ebe3c0 is 0 bytes inside a block of size 64 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x403948: Path::~Path() (thread.h:34)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406E1E: applyMoves(Path*) (thread.cc:27)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x403ABF: std::vector<Moves, std::allocator<Moves> >::~vector() (stl_vector.h:424)
+==53898==    by 0x403958: Path::~Path() (thread.h:33)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec1f40 is 16 bytes inside a block of size 32 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x4032E8: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406ECC: applyMoves(Path*) (thread.cc:33)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x403AC7: std::vector<Moves, std::allocator<Moves> >::~vector() (stl_vector.h:424)
+==53898==    by 0x403958: Path::~Path() (thread.h:33)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec1f38 is 8 bytes inside a block of size 32 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x4032E8: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406ECC: applyMoves(Path*) (thread.cc:33)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x403FE0: std::_Vector_base<Moves, std::allocator<Moves> >::~_Vector_base() (stl_vector.h:161)
+==53898==    by 0x403AE0: std::vector<Moves, std::allocator<Moves> >::~vector() (stl_vector.h:425)
+==53898==    by 0x403958: Path::~Path() (thread.h:33)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec1f48 is 24 bytes inside a block of size 32 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x4032E8: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406ECC: applyMoves(Path*) (thread.cc:33)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x403FEB: std::_Vector_base<Moves, std::allocator<Moves> >::~_Vector_base() (stl_vector.h:161)
+==53898==    by 0x403AE0: std::vector<Moves, std::allocator<Moves> >::~vector() (stl_vector.h:425)
+==53898==    by 0x403958: Path::~Path() (thread.h:33)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec1f38 is 8 bytes inside a block of size 32 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x4032E8: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406ECC: applyMoves(Path*) (thread.cc:33)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid read of size 8
+==53898==    at 0x404010: std::_Vector_base<Moves, std::allocator<Moves> >::~_Vector_base() (stl_vector.h:160)
+==53898==    by 0x403AE0: std::vector<Moves, std::allocator<Moves> >::~vector() (stl_vector.h:425)
+==53898==    by 0x403958: Path::~Path() (thread.h:33)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec1f38 is 8 bytes inside a block of size 32 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x4032E8: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406ECC: applyMoves(Path*) (thread.cc:33)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x405941: __gnu_cxx::new_allocator<Moves>::deallocate(Moves*, unsigned long) (new_allocator.h:110)
+==53898==    by 0x405246: std::allocator_traits<std::allocator<Moves> >::deallocate(std::allocator<Moves>&, Moves*, unsigned long) (alloc_traits.h:517)
+==53898==    by 0x4048C3: std::_Vector_base<Moves, std::allocator<Moves> >::_M_deallocate(Moves*, unsigned long) (stl_vector.h:178)
+==53898==    by 0x404021: std::_Vector_base<Moves, std::allocator<Moves> >::~_Vector_base() (stl_vector.h:160)
+==53898==    by 0x403AE0: std::vector<Moves, std::allocator<Moves> >::~vector() (stl_vector.h:425)
+==53898==    by 0x403958: Path::~Path() (thread.h:33)
+==53898==    by 0x403308: main (model.cc:180)
+==53898==  Address 0x16ec1f90 is 0 bytes inside a block of size 48 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x405941: __gnu_cxx::new_allocator<Moves>::deallocate(Moves*, unsigned long) (new_allocator.h:110)
+==53898==    by 0x405246: std::allocator_traits<std::allocator<Moves> >::deallocate(std::allocator<Moves>&, Moves*, unsigned long) (alloc_traits.h:517)
+==53898==    by 0x4048C3: std::_Vector_base<Moves, std::allocator<Moves> >::_M_deallocate(Moves*, unsigned long) (stl_vector.h:178)
+==53898==    by 0x404021: std::_Vector_base<Moves, std::allocator<Moves> >::~_Vector_base() (stl_vector.h:160)
+==53898==    by 0x403AE0: std::vector<Moves, std::allocator<Moves> >::~vector() (stl_vector.h:425)
+==53898==    by 0x403958: Path::~Path() (thread.h:33)
+==53898==    by 0x4032E0: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x409610: __gnu_cxx::new_allocator<Moves>::allocate(unsigned long, void const*) (new_allocator.h:104)
+==53898==    by 0x409258: std::allocator_traits<std::allocator<Moves> >::allocate(std::allocator<Moves>&, unsigned long) (alloc_traits.h:491)
+==53898==    by 0x408ECF: std::_Vector_base<Moves, std::allocator<Moves> >::_M_allocate(unsigned long) (stl_vector.h:170)
+==53898==    by 0x408794: std::_Vector_base<Moves, std::allocator<Moves> >::_M_create_storage(unsigned long) (stl_vector.h:185)
+==53898==    by 0x408034: std::_Vector_base<Moves, std::allocator<Moves> >::_Vector_base(unsigned long, std::allocator<Moves> const&) (stl_vector.h:136)
+==53898==    by 0x407BAA: std::vector<Moves, std::allocator<Moves> >::vector(std::vector<Moves, std::allocator<Moves> > const&) (stl_vector.h:320)
+==53898==    by 0x407A35: Path::Path(Manager*, std::vector<Moves, std::allocator<Moves> >) (thread.h:27)
+==53898==    by 0x406EE1: applyMoves(Path*) (thread.cc:33)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898== 
+==53898== Invalid free() / delete / delete[] / realloc()
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x403310: main (model.cc:180)
+==53898==  Address 0x16ec1f30 is 0 bytes inside a block of size 32 free'd
+==53898==    at 0x4C2918D: operator delete(void*) (vg_replace_malloc.c:576)
+==53898==    by 0x4032E8: main (model.cc:177)
+==53898==  Block was alloc'd at
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406ECC: applyMoves(Path*) (thread.cc:33)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== 
+==53898== HEAP SUMMARY:
+==53898==     in use at exit: 2,001,826 bytes in 122,241 blocks
+==53898==   total heap usage: 1,341,274 allocs, 1,219,189 frees, 6,570,881,870 bytes allocated
+==53898== 
+==53898== 16 bytes in 1 blocks are possibly lost in loss record 91 of 276
+==53898==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53898==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFF79A: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AE3CAB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898==    by 0xFFEFFFD25: ???
+==53898== 
+==53898== 16 bytes in 1 blocks are possibly lost in loss record 92 of 276
+==53898==    at 0x4C27B2D: malloc (vg_replace_malloc.c:298)
+==53898==    by 0x4C29AF9: realloc (vg_replace_malloc.c:785)
+==53898==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFF6A5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AE3CAB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898== 
+==53898== 16 bytes in 1 blocks are possibly lost in loss record 93 of 276
+==53898==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53898==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFF79A: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AE3D11: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898==    by 0xFFEFFFD25: ???
+==53898== 
+==53898== 16 bytes in 1 blocks are possibly lost in loss record 94 of 276
+==53898==    at 0x4C27B2D: malloc (vg_replace_malloc.c:298)
+==53898==    by 0x4C29AF9: realloc (vg_replace_malloc.c:785)
+==53898==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFF6A5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AE3D11: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898== 
+==53898== 16 bytes in 1 blocks are possibly lost in loss record 95 of 276
+==53898==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53898==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFF79A: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AED6F4: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA19: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898==    by 0xFFEFFFD25: ???
+==53898== 
+==53898== 16 bytes in 1 blocks are possibly lost in loss record 96 of 276
+==53898==    at 0x4C27B2D: malloc (vg_replace_malloc.c:298)
+==53898==    by 0x4C29AF9: realloc (vg_replace_malloc.c:785)
+==53898==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFF6A5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AED6F4: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA19: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898== 
+==53898== 16 bytes in 1 blocks are possibly lost in loss record 97 of 276
+==53898==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53898==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFF79A: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AE878B: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA1E: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898==    by 0xFFEFFFD25: ???
+==53898== 
+==53898== 16 bytes in 1 blocks are possibly lost in loss record 98 of 276
+==53898==    at 0x4C27B2D: malloc (vg_replace_malloc.c:298)
+==53898==    by 0x4C29AF9: realloc (vg_replace_malloc.c:785)
+==53898==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFF6A5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B02FD1: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AE878B: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA1E: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898== 
+==53898== 32 bytes in 1 blocks are definitely lost in loss record 103 of 276
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x40AA8E: MessageManager::deserializeAction(char const*, Manager*&) (messageManager.cc:64)
+==53898==    by 0x402FEE: main (model.cc:109)
+==53898== 
+==53898== 96 bytes in 1 blocks are possibly lost in loss record 217 of 276
+==53898==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53898==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADD94C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898==    by 0xFFEFFFD25: ???
+==53898== 
+==53898== 96 bytes in 1 blocks are possibly lost in loss record 218 of 276
+==53898==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53898==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B02FC3: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AE3CAB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898== 
+==53898== 96 bytes in 1 blocks are possibly lost in loss record 219 of 276
+==53898==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53898==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B02FC3: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AE3D11: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898== 
+==53898== 96 bytes in 1 blocks are possibly lost in loss record 220 of 276
+==53898==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53898==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B02FC3: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AED6F4: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA19: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898== 
+==53898== 96 bytes in 1 blocks are possibly lost in loss record 221 of 276
+==53898==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53898==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFE88C: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AFE8F5: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B02FC3: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AE878B: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA1E: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898== 
+==53898== 132 bytes in 1 blocks are possibly lost in loss record 224 of 276
+==53898==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53898==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFF217: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B0304A: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AE3CAB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898==    by 0xFFEFFFD25: ???
+==53898== 
+==53898== 132 bytes in 1 blocks are possibly lost in loss record 225 of 276
+==53898==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53898==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFF217: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B0304A: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AE3D11: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA0D: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898==    by 0xFFEFFFD25: ???
+==53898== 
+==53898== 148 bytes in 1 blocks are possibly lost in loss record 226 of 276
+==53898==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53898==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFF013: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B0304A: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AED6F4: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA19: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898==    by 0xFFEFFFD25: ???
+==53898== 
+==53898== 148 bytes in 1 blocks are possibly lost in loss record 227 of 276
+==53898==    at 0x4C29975: calloc (vg_replace_malloc.c:711)
+==53898==    by 0x6D72365: g_malloc0 (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFF013: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B0304A: g_type_register_fundamental (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AE878B: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA1E: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898==    by 0xFFEFFFD25: ???
+==53898== 
+==53898== 184 bytes in 1 blocks are possibly lost in loss record 229 of 276
+==53898==    at 0x4C29B78: realloc (vg_replace_malloc.c:785)
+==53898==    by 0x6D723B5: g_realloc (in /usr/lib64/libglib-2.0.so.0.4600.2)
+==53898==    by 0x6AFE798: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6B03214: g_type_register_static (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AEF1E4: g_param_type_register_static (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6AF14EB: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x6ADDA24: ??? (in /usr/lib64/libgobject-2.0.so.0.4600.2)
+==53898==    by 0x400F1E2: _dl_init (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x4001219: ??? (in /usr/lib64/ld-2.17.so)
+==53898==    by 0x2: ???
+==53898==    by 0xFFEFFFD16: ???
+==53898==    by 0xFFEFFFD1F: ???
+==53898== 
+==53898== 618 (160 direct, 458 indirect) bytes in 2 blocks are definitely lost in loss record 237 of 276
+==53898==    at 0x4C27BE3: malloc (vg_replace_malloc.c:299)
+==53898==    by 0x411EBA: json_object (value.c:53)
+==53898==    by 0x40EEE4: parse_object (load.c:686)
+==53898==    by 0x40EEE4: parse_value (load.c:856)
+==53898==    by 0x40F315: parse_json (load.c:893)
+==53898==    by 0x40F49C: json_loads (load.c:953)
+==53898==    by 0x40A99D: MessageManager::deserializeAction(char const*, Manager*&) (messageManager.cc:51)
+==53898==    by 0x402FEE: main (model.cc:109)
+==53898== 
+==53898== 975,388 (12,512 direct, 962,876 indirect) bytes in 391 blocks are definitely lost in loss record 275 of 276
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x406ECC: applyMoves(Path*) (thread.cc:33)
+==53898==    by 0x4073A7: BFS(int) (thread.cc:91)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== 976,576 (12,512 direct, 964,064 indirect) bytes in 391 blocks are definitely lost in loss record 276 of 276
+==53898==    at 0x4C28203: operator new(unsigned long) (vg_replace_malloc.c:334)
+==53898==    by 0x4070A4: BFS(int) (thread.cc:66)
+==53898==    by 0x406C8F: void std::_Bind_simple<void (*(int))(int)>::_M_invoke<0ul>(std::_Index_tuple<0ul>) (functional:1531)
+==53898==    by 0x406BAE: std::_Bind_simple<void (*(int))(int)>::operator()() (functional:1520)
+==53898==    by 0x406B4D: std::thread::_Impl<std::_Bind_simple<void (*(int))(int)> >::_M_run() (thread:115)
+==53898==    by 0x415BFF: execute_native_thread_routine (in /homes/iws/alltran/git/CSE333/hw6/test/client)
+==53898==    by 0x7882DC4: start_thread (in /usr/lib64/libpthread-2.17.so)
+==53898==    by 0x7B8E73C: clone (in /usr/lib64/libc-2.17.so)
+==53898== 
+==53898== LEAK SUMMARY:
+==53898==    definitely lost: 25,216 bytes in 785 blocks
+==53898==    indirectly lost: 1,927,398 bytes in 121,218 blocks
+==53898==      possibly lost: 1,352 bytes in 18 blocks
+==53898==    still reachable: 47,860 bytes in 220 blocks
+==53898==                       of which reachable via heuristic:
+==53898==                         newarray           : 1,536 bytes in 16 blocks
+==53898==         suppressed: 0 bytes in 0 blocks
+==53898== Reachable blocks (those to which a pointer was found) are not shown.
+==53898== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==53898== 
+==53898== For counts of detected and suppressed errors, rerun with: -v
+==53898== Use --track-origins=yes to see where uninitialised values come from
+==53898== ERROR SUMMARY: 135625 errors from 85 contexts (suppressed: 0 from 0)
