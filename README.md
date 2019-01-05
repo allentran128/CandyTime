@@ -1,13 +1,11 @@
 # CandyTime
 
 ## Description
-I implemented a clone of the popular mobile application, Candy Crush, in C/C++. All of the data (game state) is serialized in JSON and sent over a network between the server and client.
+Clone of popular mobile application, Candy Crush, written in C/C++ for the desktop.
 
-## Development
-First I implemented a linked list and 2D array as the underlying data structures for this project. 
-
-Then desgined the view interface of the board. Used a mapping of integers to colors to represent the candies on the board. Utilized the GTK+ library to create a GUI of the board. Added functionality to select a candy on the board and directional buttons to allow swapping a selected candy in that direction.
-
-Next I implemented the game logic; when 3+ of the same candy are in a row or column they are erased and the candies above them fall down, updating the score, generating new candies at the top of the board, and so on.
-
-Then I encoded the representation of the game into a game definition and a game state in JSON. Defined the model to be the client and the view to be the server. Then established a connection between them using TCP protocol. The game initialized after a handshake between the client and the server.
+The intention of this project was to introduce principles of systems programming: defining the architecture, modules, interfaces, and data of the system.
+I chose the MVC architectural pattern to decouple the application into three separate entities to achieve parallel development.
+I implemented the data structure to represent the game board and designed its public interface. 
+I used the GTK+ library to create a GUI of the board which inlcudes directional buttons to perform swaps with adjacent candies.
+I learned how to serialize and deserialize data that is used to represent the game state over a TCP network connection.
+The server application runs on memory, so data is not persisstent if the server crashes. (which is outside the scope of the project)
